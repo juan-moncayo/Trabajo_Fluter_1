@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class WidgetAppBar extends StatelessWidget {
+class WidgetAppBar extends StatelessWidget implements PreferredSizeWidget {
   const WidgetAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.account_circle_rounded),
-        backgroundColor: Colors.blueAccent,
-        title: Text('Scaffold'),
-        elevation: 15,
-        shadowColor: Colors.red,
-      ),
-      body: Center(child: Text('AppBar TEXT')),
+    return AppBar(
+      leading: Icon(Icons.inventory),
+      backgroundColor: Colors.blueAccent,
+      title: Text('Peripheral Inventory'),
+      elevation: 15,
+      shadowColor: Colors.red,
     );
   }
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
